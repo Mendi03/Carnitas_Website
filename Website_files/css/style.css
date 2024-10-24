@@ -9,4 +9,11 @@ header{
     display: flex;
     background-color: #DE3B26;
     font-family: 'Roboto Flex', 'Roboto Serif';
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
 }
