@@ -1,19 +1,339 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+    
+}
+
+/* Default Typography */
+
+html {
+    font-size: 14px;
     font-family: 'Arvo','Roboto Flex', 'Roboto Serif';
 }
 
+h1{
+    font-size: 4.624rem;
+    text-transform: uppercase;
+    color: rgb(28, 28, 28);
+    font-weight: bold;
+}
+
+h2{
+    font-size: 4.110rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgb(28, 28, 28);
+}
+
+h3{
+    font-size: 3.247rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: rgb(28, 28, 28);
+}
+
+h4{
+    font-size: 1.802rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: rgb(28, 28, 28);
+}
+
+h5{
+    font-size: 1.802rem;
+    font-weight: normal;
+    font-family: 'Roboto Serif';
+    text-transform: capitalize;
+    color: rgb(222, 59, 38);
+    font-style: italic;
+}
+
+
+p{
+    font-family: 'Roboto Flex';
+    font-weight: normal;
+    font-size: 1.125rem;
+    opacity: 75%;
+    letter-spacing: 0.15%;
+
+}
+
+/* Other default stuff */
+
+#subtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 24px;
+}
+
+hr{
+    width: 92px;
+    border: none;
+    height: 5px;
+    color: rgb(222, 59, 38);  /* old IE */
+    background-color: rgb(222, 59, 38);  /* Modern Browsers */
+}
+
+.btn_outline{
+    background-color: rgb(255, 183, 31);
+    padding: 24px 48px;
+    border-radius: 32px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-family: 'Arvo';
+    font-weight: bold;
+    letter-spacing: 0.25%;
+    display: inline-flex;
+}
+
+
+/* Header menu */
+
 header{
     display: flex;
-    background-color: #DE3B26;
-    font-family: 'Roboto Flex', 'Roboto Serif';
+    background-color: rgb(222, 59, 38);
+    font-family: 'Roboto Flex', 'Arvo';
     justify-content: space-between;
     align-items: center;
+    padding: 0 80px;
+    height: 88px;
+}
+header div{
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
 
 nav ul{
+   
     list-style: none;
     display: flex;
+    gap: 32px;
+
+}
+
+nav ul a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.125rem;
+    letter-spacing: 0.15%;
+}
+
+
+
+/* Hero */
+
+.Hero{
+    display: flex;
+    padding: 0 80px;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.Hero .btn_outline{
+    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+}
+
+#content{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
+    text-align: left center;    
+}
+
+#right_hero img{
+    width: 100%;
+    height: auto;
+}
+
+/* Dishes Section */
+
+.Dishes{
+    background-color: rgba(255, 183, 31, .05);
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+#dish{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+#dish_cards{
+    display: grid;
+    grid-template-columns: 80px 280px 280px 280px 80px;
+    height: fit-content;
+    width: 100%;
+    /* grid-column-gap: 100px; */
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+#dish_cards div{
+    text-align: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 280px;
+}
+
+.card h3{
+    height: 112px;
+    text-align: center;
+}
+
+.card div{
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    display: inline-block; 
+    position: relative;
+    overflow: hidden;
+}
+
+.card img{
+    width: 280px;
+}
+
+/* Services section */
+
+.Services{
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+.grid_photo{
+    display: grid;
+    grid-template-columns: repeat(2,329px);
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    height: fit-content;
+}
+
+.Services #content{
+    justify-content: center;
+}
+
+.grid_photo img{
+    width: 329px;
+}
+
+.grid_photo div{
+    width: 329px;
+    height: 677px;
+    display: inline-block; 
+    position: relative;
+    overflow: hidden;
+}
+
+.Services .btn_outline{
+    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+}
+
+/* Yellow Banner */
+
+.banner{
+    background-color: rgb(255, 183, 31);
+    padding: 120px 80px;
+    text-align: center;
+}
+
+.banner h3{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.banner span{
+    color: rgb(222, 59, 38);
+}
+
+/* Timeline */
+
+.timeline{
+    padding: 120px 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.steps{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 16px;
+    
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    border-color: rgb(28, 28, 28);
+    border-width: 1px;
+    border-style: solid;
+    padding: 56px;
+    min-width: 300px;
+    width: 420px;
+    align-items: center;
+    gap: 40px;
+}
+
+.step div{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+}
+
+/* About */
+
+.about{
+    padding: 80px;
+    background-color:rgba(222, 59, 38, .05);
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    height: 100%;
+}
+
+
+.info2{
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+.about #subtitle{
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+
+.about img{
+    width: 60%;
+    height: fit-content;
 }

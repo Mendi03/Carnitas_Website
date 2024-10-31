@@ -5,28 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carnitas Jose Alfredo!</title>
 
-    <link rel="stylesheet" href="css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 
+    
+    <link rel="stylesheet" href="css/style.css" />
+
 </head>
 <body>
+
+    <!-- header -->
     <header>
-       <a href=""><img src="Images\carnitas_logo_transparent.png" width="50" height="56" alt="Carnitas logo"></a> 
+        
+       <div>
+           <a href=""><img src="Images\carnitas_logo_transparent.png" width="50" height="56" alt="Carnitas logo"></a>
+           <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+           </nav>
+       </div>
 
-       <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">FAQ</a></li>
-        </ul>
-       </nav>
-
-       <a href="" class="btn outline"> ORDER NOW </a>
+       <a href="" class="btn_outline"> ORDER NOW </a>
 
     </header>
+
+    <!-- Hero -->
+
+    <section class="Hero">
+        <div id="left_hero">
+            <div id="content">
+            <h5>Mexican Food for On-site Events</h5>
+            <h1>WE ARE CARNITAS <br>JOSé ALFREDO!</h1>
+            <hr>
+            <p>Straight from the heart of Dolores Hidalgo CIN, our business seeks to share one of the finest dishes in Mexican cuisine: Carnitas</p>
+            </div>
+            
+            <div>
+                <a href="" class="btn_outline"> ORDER NOW </a>
+            </div>
+        </div>
+        <div id="right_hero">
+            <img src="Images/carnitas_logo_transparent.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- Dishes -->
+
+    <section class="Dishes">
+
+        <div id="dish">
+            <div id="subtitle">
+                <h2>OUR DISHES</h2>
+                <hr>
+            </div>
+
+            <div id="dish_cards">
+                <img src="Images\chevron-left.svg" width="80" height="80" alt="arrow left">
+                <div class="card" id="tacos">
+                    <div>
+                        <img src="Images/Tacos_Bright.jpg" alt="">
+                    </div>
+                    <h3>tacos</h3>
+                    <p>Freshly made tortillas combined with  a meat cut and toppings of your choice</p>
+                </div>
+                <div class="card" id="torta">
+                    <div>
+                        <img src="Images/torta.jpg" alt="">
+                    </div>
+                    <h3>tortas</h3>
+                    <p>Freshly made tortillas combined with  a meat cut and toppings of your choice</p>
+                </div>
+                <div class="card" id="dorados">
+                    <div>
+                        <img src="Images/dorados.jpg" alt="">
+                    </div>
+                    <h3>crispy tacos</h3>
+                    <p>Freshly made tortillas combined with  a meat cut and toppings of your choice</p>
+                </div>
+                <img src="Images\chevron-right.svg" width="80" height="80" alt="arrow right">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+
+    <section class="Services">
+        <div id="subtitle">
+            <h2>services</h2>
+            <hr>
+        </div>
+
+        <div class="info">
+            <!-- imgs -->
+            <div class="grid_photo">
+                <div>
+                    <img src="Images/Cazo_vertical.jpg" alt="">
+                </div>
+                <div>
+                    <img src="Images/Tacos_Bright.jpg" alt="">
+                </div>
+            </div>
+            <!-- txt -->
+            <div id="content">
+                <div>
+                    <h3>ON-SITE EVENTS</h3>
+                    <h5>Starting at $1200</h5>
+                </div>
+                <!-- <hr> -->
+                <p>We will go to whatever address you choose and cook in that location the day of your event, this includes us serving. Please have enough space for us to work. An open square space in a backyard about the size of a small bedroom usually works.</p>
+
+                <div>
+                    <a href="" class="btn_outline"> ORDER NOW </a>
+                </div>
+            </div>
+
+            <div>
+                <img src="Images/chevron-right.svg" width="80" height="80" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Yellow banner -->
+    
+    <section class="banner">
+           <h3>To <span>provide</span> the best service possible, we need
+            <span>two weeks</span> of preparation</h3>
+    </section>
+
+    <!-- Timeline -->
+
+    <section class="timeline">
+        <div id="subtitle">
+            <h2>two-week timeline</h2>
+            <hr>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <img src="Images/basket2.svg" width="75" height="75" alt="">
+                <div>
+                    <h4>Secure Ingredients</h4>
+                    <p>Some Ingredients are unable to be acquired on short notice; therefore, we need some time in advance to secure all the necessary ingredients.</p>
+                </div>
+            </div>
+            <div class="step">
+                <img src="Images/clock.svg" width="75" height="75" alt="">
+                <div>
+                    <h4>Food Preparation</h4>
+                    <p>Some accompaniments and side dishes need to be prepared before arrival.</p>
+                </div>
+            </div>
+            <div class="step">
+                <img src="Images/truck.svg" width="75" height="75" alt="">
+                <div>
+                    <h4>Load Supplies</h4>
+                    <p>On the day of the event, we load our truck with all of our necessary supplies. We also obtain any last minute ingredients (bolillos, tortillas, etc.). </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+
+    <section class="about">
+            <img src="Images/parroquia-dolores.jpg" alt="">
+            <div class="info2">
+                <div id="subtitle">
+                    <h2>about us</h2>
+                    <hr>
+                </div>
+
+
+                <div>
+                    <p>
+                        Our entire family was raised in Dolores Hidalgo CIN, a famous tourist city. Moving to and living in Texas made us realize two things:
+                    
+                        <ol>
+                            <li>the subpar Mexican food</li>
+                            <li>the demand for authentic and delicious Mexican Cuisine</li>
+                        </ol>
+                    
+                        Therefore, we knew we had something to offer: Carnitas!
+                    </p>
+                    <p>
+                        Read More
+                    </p>
+
+                    <p>
+                        Carnitas dishes originated from the state of Michoacan, home to the world capital of carnitas: the renowned city of Quiroga.
+        
+                        Although we are all from Dolores, which is based in the state of Guanajuato, the recipe we use actually comes from the state of Michoacan. We are confident that if you have tasted authentic Carnitas before, you will savor that genuine flavor from our Carnitas as well!
+                    </p>
+
+                    <hr>
+                </div>
+                
+            </div>
+
+    </section>
+
+    <!-- Important -->
+
+    <section class="important">
+        <h3>Carnitas Jose Alfredo is available exclusively during weekends or holidays. We are a family owned business with day jobs, so we try to remain flexible for everyone.
+        </h3>
+    </section>
+
+    <footer>
+        <div>
+            <div name="follow">
+                <h3>Follow</h3>
+                <hr>
+                <p>Submit your email address to receive news and updates.</p>
+                <form action="">
+                    <input type="email" name="" id="">
+                    <input type="button" value="Submit">
+                </form>
+                <div>
+                    <img src="Images/facebook.svg" alt="facebook">
+                    <img src="Images/instagram.svg" alt="instagram">
+                </div>
+            </div>
+            <div name="contact">
+                <h3>Contact</h3>
+                <hr>
+                <p>Email: pumasblood@gmail.com</p>
+                <p>Phone: +1 (111) 111-1111</p>
+            </div>
+        </div>
+
+        <div>
+            <p>Copyright @ 2024 Carnitas Jose Alfredo - All rights Reserved</p>
+            <div class="vertical_line"></div>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+        </div>
+
+
+    </footer>
+
+
 </body>
 </html>
