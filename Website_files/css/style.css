@@ -53,12 +53,13 @@ h5{
 
 
 p{
+    color: rgb(28, 28, 28);
     font-family: 'Roboto Flex';
     font-weight: normal;
     font-size: 1.125rem;
     opacity: 75%;
     letter-spacing: 0.15%;
-
+    line-height: 22px;
 }
 
 /* Other default stuff */
@@ -67,6 +68,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-bottom: 80px;
     gap: 24px;
 }
@@ -311,11 +313,11 @@ nav ul a{
 /* About */
 
 .about{
-    padding: 80px;
-    background-color:rgba(222, 59, 38, .05);
+    padding: 120px 80px;
+    background-color:rgba(255, 183, 31, .05);
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 40px;
     height: 100%;
 }
 
@@ -336,4 +338,614 @@ nav ul a{
 .about img{
     width: 60%;
     height: fit-content;
+}
+
+#about_text{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#about_text ul{
+    font-family: 'Roboto Flex';
+    font-size: 1.125rem;
+    color: rgb(28, 28, 28);
+    opacity: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: inside;
+    letter-spacing: 0.15%;
+}
+
+#about_text button{
+    color: rgb(28, 28, 28);
+    font-weight: bold;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#about_text hr{
+    height: 1px;
+    width: 100%;
+}
+
+/* Important section */
+
+.important{
+    padding: 120px 80px;
+    text-align: center;
+    font-family: 'Roboto Serif';
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    background-color: rgb(222, 59, 38);
+    display: flex;
+    padding: 80px;
+    gap: 160px;
+    
+}
+
+.top div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 16px;
+}
+
+.top div h3{
+    color: white;
+    text-transform: uppercase;
+}
+
+.top div p{
+    color: white;
+    opacity: 100%;
+}
+
+.top #subtitle{
+    align-items: start;
+    margin-bottom: 0px;
+}
+
+.top div hr{
+    color: rgb(255, 183, 31);  /* old IE */
+    background-color: rgb(255, 183, 31);  /* Modern Browsers */
+}
+
+#socials{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#socials img{
+    width: 20px;
+    height: 20px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    background-color: rgb(255, 183, 31);
+    padding: 40px 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom p{
+    color: rgb(28, 28, 28);
+    opacity: 100%;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 40px;
+    width: 400px;
+
+}
+
+.newsletter #email{
+    color: rgb(28, 28, 28);
+    font-family: 'Roboto Flex';
+    font-weight: normal;
+    font-size: 1.125rem;
+    letter-spacing: 0.15%;
+    width: 100%;
+    padding: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+.newsletter #btn{
+    font-family: 'Arvo';
+    text-transform: uppercase;
+    color: rgb(222, 59, 38);
+    padding: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+/*------------------------Menu page------------------------*/
+
+/* Little Hero */
+
+.little_hero{
+    background-image: url('../Images/puesto_horizontal.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.little_hero div{
+    background-color: rgba(222, 59, 38, .6);
+    padding: 120px 80px;
+    width: 100%;
+}
+
+.little_hero h1{
+    color: white;
+}
+
+/* Plans */
+
+#pickup{
+    display: flex;
+    flex-direction: row;
+}
+
+#pickup #subtitle{
+    width: 50%;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 183, 31);
+}
+
+#pickup #subtitle h2{
+    color: white;
+}
+
+#pickup #frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: rgba(255, 183, 31, 0.1);
+    padding: 120px 80px;
+   
+}
+
+/* ada */
+
+#on_site{
+    display: flex;
+    flex-direction: row;
+}
+
+#on_site #subtitle{
+    width: 50%;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(222, 59, 38);
+}
+
+#on_site #subtitle hr{
+    color: rgb(255, 183, 31);
+    background-color: rgb(255, 183, 31);
+}
+
+#on_site #subtitle h2{
+    color: white;
+}
+
+#on_site #frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: rgba(255, 183, 31, 0.1);
+    padding: 120px 80px;
+   
+}
+
+.plan_card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    width: fit-content;
+    border-style: solid;
+    border-color: rgb(28, 28, 28);
+    border-width: 1px;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.plan_nav ul{
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: rgba(28, 28, 28, 0.25);
+    border-width: 1px;
+    border-radius: 40px;
+    padding: 4px;
+    list-style: none;
+}
+
+.plan_nav ul li{
+    display: flex;
+    width: 90px;
+    height: 55px;
+    /* padding: 12px 24px; */
+    font-size: 1.802rem;
+    align-items: center;
+    justify-content: center;
+    /* border-style: solid;
+    border-width: 1px; */
+    border-radius: 40px;
+    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+}
+
+.plan_nav ul li:nth-child(1) a{
+    color: white;
+}
+
+.plan_nav ul li a{
+    text-decoration: none;
+}
+
+.plan_card .pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+sup{
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.plan_card hr{
+    width: 100%;
+    height: 1px;
+    color: rgba(28, 28, 28, 0.25);
+    background-color: rgba(28, 28, 28, 0.25);
+}
+
+.plan_card .details ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: inside none;
+   
+}
+
+.plan_card .details ul li{
+    font-family: 'Roboto Flex';
+    justify-content: center;
+    align-items: center;
+    padding-left: 24px;
+}
+
+.y-detail{
+    background-image: url('../Images/check-circle.svg');
+    background-repeat: no-repeat;
+    color: rgb(28, 28, 28);
+}
+
+.x-detail{
+    background-image: url('../Images/x-circle.svg');
+    background-repeat: no-repeat;
+    color: rgba(28, 28, 28,0.5);
+}
+
+.plan_card .btn_outline{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Arvo', 'Roboto Flex';
+    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+}
+
+/* Menu banner */
+
+#menu_banner{
+    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+    padding: 120px;
+    justify-content: center;
+    text-align: center;
+}
+
+#menu_banner h2{
+    color: white;
+}
+
+/* Table */
+
+.table{
+    padding: 120px 240px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+th,
+td{
+    padding: 12px 24px;
+}
+
+table th,
+tfoot td{
+    text-align: start;
+    background-color: rgb(222, 59, 38);
+}
+
+table thead tr th:nth-last-child(1),
+table thead tr th:nth-last-child(2){
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    width: 120px;
+}
+
+table tbody tr td:nth-last-child(1),
+table tbody tr td:nth-last-child(2)
+{
+    text-align: center;
+}
+
+
+table thead tr th:nth-child(1){
+    text-align: start;
+    text-transform: uppercase;
+    color: white;
+}
+
+table tbody tr:nth-child(1),
+table tbody tr:nth-child(8){
+    background-color: rgb(255, 183, 31);
+    text-align: start;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+table tbody tr{
+    border-bottom: 1px solid rgba(28, 28, 28, 0.25);
+}
+
+table tbody tr:nth-child(1),
+table tbody tr:nth-child(7),
+table tbody tr:nth-child(8),
+table tbody tr:nth-child(17){
+    border-bottom: 0px solid;
+}
+
+table tfoot tr td{
+    font-family: 'Roboto Flex';
+    font-weight: normal;
+    color: white;
+}
+
+/* Sides section */
+
+.sides{
+    background-color: rgba(255, 183, 31,0.1);
+    padding: 120px 80px;
+}
+
+.sides_cards{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    height: fit-content;
+    width: 100%;
+    /* grid-column-gap: 100px; */
+    justify-content: space-between;
+}
+
+.s_card{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: start;
+    background-color: white;
+}
+
+#card_img{
+    width: 400px;
+    height: 280px;
+    display: inline-block; 
+    position: relative;
+    overflow: hidden;
+}
+
+.s_card img{
+    width: 400px;
+}
+
+#card_bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+#s_and_price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#s_and_price hr{
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: #000;
+    background: repeating-linear-gradient(90deg,rgba(28, 28, 28, 0.75),rgba(28, 28, 28, 0.75) 6px,transparent 6px,transparent 12px);
+}
+
+#s_and_price span{
+    color: rgb(222, 59, 38);
+}
+
+/* Other dishes */
+
+.other{
+    padding: 120px 80px;
+}
+
+.other h3{
+    text-transform: uppercase;
+}
+
+.other ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.other ul li{
+    text-transform: capitalize;
+}
+
+/*------------------------Contact page------------------------*/
+
+/* Little Hero */
+
+.little_hero2{
+    background-image: url('../Images/apa_puesto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.little_hero2 div{
+    background-color: rgba(222, 59, 38, .6);
+    padding: 120px 80px;
+    width: 100%;
+}
+
+.little_hero2 h1{
+    color: white;
+}
+
+/* FAQ section*/
+
+.faq{
+    padding: 120px 80px;
+}
+
+.questions ul{
+    list-style: none;
+}
+
+.questions ul li{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Images/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: top 28px left 34px;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.3);
+    gap: 24px;
+}
+
+.questions ul li p{
+    color: rgb(28, 28, 28);
+    opacity: 100%;
+    padding-left: 10px;
+    display: none;
+}
+
+
+
+.questions ul li h4{
+    text-transform: none;
+    padding-left: 72px;
+    list-style: none;
+	cursor: pointer;
+}
+
+.questions ul li:hover{
+    background-image: url(../Images/chevron-up.svg);
+}
+.questions ul li:hover p{
+    display: block;
+}
+
+/* Fill-out form */
+
+.fill_form{
+    background-color: rgba(255, 183, 31,0.1);
+    padding: 120px 80px;
+}
+
+.message_form{
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+#title_stuff{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+#title_stuff h2,
+#title_stuff h5{
+    text-transform: none;
+}
+
+.p_info{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.message_form input,
+.message_form textarea{
+    width: 100%;
+    padding: 24px 8px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.3);
+    font-family: 'Roboto Flex', 'Arvo';
+   
+}
+
+.message_form textarea{
+    resize: none;
+    height: 64px;
+}
+
+.message_form .btn_outline{
+    text-transform: uppercase;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
 }

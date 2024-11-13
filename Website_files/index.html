@@ -23,15 +23,15 @@
            <a href=""><img src="Images\carnitas_logo_transparent.png" width="50" height="56" alt="Carnitas logo"></a>
            <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html#menu_banner">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="">FAQ</a></li>
             </ul>
            </nav>
        </div>
 
-       <a href="" class="btn_outline"> ORDER NOW </a>
+       <a href="menu.html" class="btn_outline"> ORDER NOW </a>
 
     </header>
 
@@ -183,24 +183,31 @@
                 </div>
 
 
-                <div>
+                <div id="about_text">
                     <p>
-                        Our entire family was raised in Dolores Hidalgo CIN, a famous tourist city. Moving to and living in Texas made us realize two things:
-                    
-                        <ol>
-                            <li>the subpar Mexican food</li>
-                            <li>the demand for authentic and delicious Mexican Cuisine</li>
-                        </ol>
-                    
+                        Our entire family was raised in Dolores Hidalgo CIN, a famous tourist city. 
+
+                        <br>
+
+                        Moving to and living in Texas made us realize two things:
+                    </p>
+                        <ul>
+                            <li>The subpar Mexican food</li>
+                            <li>The demand for authentic and delicious Mexican Cuisine</li>
+                        </ul>
+                    <p>
                         Therefore, we knew we had something to offer: Carnitas!
                     </p>
-                    <p>
-                        Read More
-                    </p>
 
-                    <p>
+                    <div class="button">
+                        <button>Read More</button>
+                    </div>
+
+                    <p id="read_more">
                         Carnitas dishes originated from the state of Michoacan, home to the world capital of carnitas: the renowned city of Quiroga.
-        
+                    </p>
+                    
+                    <p>
                         Although we are all from Dolores, which is based in the state of Guanajuato, the recipe we use actually comes from the state of Michoacan. We are confident that if you have tasted authentic Carnitas before, you will savor that genuine flavor from our Carnitas as well!
                     </p>
 
@@ -218,30 +225,43 @@
         </h3>
     </section>
 
+    <!-- Footer -->
+
     <footer>
-        <div>
+        <div class="top">
             <div name="follow">
-                <h3>Follow</h3>
-                <hr>
-                <p>Submit your email address to receive news and updates.</p>
-                <form action="">
-                    <input type="email" name="" id="">
-                    <input type="button" value="Submit">
-                </form>
-                <div>
-                    <img src="Images/facebook.svg" alt="facebook">
-                    <img src="Images/instagram.svg" alt="instagram">
+                <div id="subtitle">
+                    <h3>Follow</h3>
+                    <hr>
                 </div>
+
+                <p>Submit your email address to receive news and updates.</p>
+                <div id="socials">
+                    <a href=""><img src="Images/facebook.svg" alt="facebook"></a>
+                    <a href=""><img src="Images/instagram.svg" alt="instagram"></a>
+                </div>
+                <form action="" class="newsletter">
+                   
+                        <input type="email" name="" id="email" placeholder="Enter your Email...">
+                        <input type="button" id="btn" value="submit">
+                    
+                </form>
+
+                
             </div>
             <div name="contact">
-                <h3>Contact</h3>
-                <hr>
+                <div id="subtitle">
+                    <h3>Contact</h3>
+                    <hr>
+                </div>
+
                 <p>Email: pumasblood@gmail.com</p>
+
                 <p>Phone: +1 (111) 111-1111</p>
             </div>
         </div>
 
-        <div>
+        <div class="bottom">
             <p>Copyright @ 2024 Carnitas Jose Alfredo - All rights Reserved</p>
             <div class="vertical_line"></div>
             <p>Privacy Policy</p>
