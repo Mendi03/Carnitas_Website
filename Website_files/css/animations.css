@@ -1,0 +1,99 @@
+/* header */
+nav ul a{
+    transition: color .6s ease;
+}
+
+
+nav ul a:hover{
+    color: rgb(255, 183, 31);
+    text-decoration: underline;
+}
+
+/* button */
+.btn_outline{
+    transition: box-shadow .6s ease;
+}
+
+.btn_outline:hover{
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px  rgba(28, 28, 28,0.5);
+}
+
+/* footer button */
+.newsletter #btn:hover{
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------------- Home Page ---------------------------------------------------------------*/
+
+/* Dishes section */
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 80px;
+    overflow: hidden;
+}
+
+.slider{
+    --items-per-screen: 3;
+    --slider-index: 0;
+    --translate-value: calc(-100% / var(--items-per-screen));
+    display: flex;
+    width: calc(100% - 2* var(--slider-padding)); 
+    /* overflow: hidden; */
+    transform: translateX(calc(var(--slider-index) * var(--translate-value)));
+    transition: transform 450ms ease-in-out;
+} 
+
+.slider > .thing{
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    margin: 0;
+    /* background-color: rgb(0, 0, 255, 0.2); */
+    justify-items: center;
+}
+
+.handle{
+    width: var(--slider-padding);
+    /* background-color: rgb(255, 0, 0,0.25); */
+    z-index: 10;
+    align-content: center;
+}
+
+
+/* About section */
+
+.about_text{
+    transition: display .6s ease;
+}
+
+.about_text button:hover{
+    text-decoration: underline;
+}
+
+.about_text .hide{
+    display: none;
+}
+
+.about_text .show{
+    display: block;
+}
+
+/* Timeline section */
+
+.step{
+    transition: background-color .6s ease, color .6s ease;
+}
+
+.step:hover{
+    background-color: rgb(255, 183, 31);
+    border: none;
+    p,
+    h4{
+        color: white;
+        opacity: 1;
+    }
+}
+

@@ -94,6 +94,10 @@ hr{
     display: inline-flex;
 }
 
+form input:focus,
+form textarea:focus{
+    outline: none;
+}
 
 /* Header menu */
 
@@ -159,11 +163,16 @@ nav ul a{
 
 /* Dishes Section */
 
+:root{
+    --slider-padding: 5rem;
+}
+
 .Dishes{
     background-color: rgba(255, 183, 31, .05);
-    padding: 120px 80px;
+    padding: 120px 0px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 #dish{
@@ -173,27 +182,19 @@ nav ul a{
     gap: 24px;
 }
 
-#dish_cards{
-    display: grid;
-    grid-template-columns: 80px 280px 280px 280px 80px;
-    height: fit-content;
-    width: 100%;
-    /* grid-column-gap: 100px; */
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-}
 
-#dish_cards div{
-    text-align: center;
-}
+/* .handle:hover{
+    background-color: rgb(255, 0, 0,0.5);
+} */
 
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 32px;
     width: 280px;
+    /* background-color: rgba(0, 0, 255, 0.3) */
 }
 
 .card h3{
@@ -214,43 +215,91 @@ nav ul a{
     width: 280px;
 }
 
+.carousel .show{
+    display: flex;
+ }
+ .carousel .hide{
+     display: none;
+ }
+ 
+ .arrow{
+     cursor: pointer;
+ }
+
 /* Services section */
 
 .Services{
-    padding: 120px 80px;
+    padding: 120px 0px;
     display: flex;
     flex-direction: column;
 }
 
-.info{
+.carousel{
+    display: grid;
+    margin: 0 80px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+
+    overflow-x: auto;
+    transform: translateX(-00%);
+}
+
+.carousel > .info{
     display: flex;
-    width: 100%;
+    max-width: 100%;
     gap: 40px;
     align-items: center;
 }
 
 .grid_photo{
+    width: 50%;
+    /* border: solid 1px black; */
+}
+
+.grid_photo ul{
     display: grid;
-    grid-template-columns: repeat(2,329px);
-    /* grid-template-rows: 1fr 1fr 1fr; */
-    height: fit-content;
+    list-style-type: none;
+    grid-template-rows: 1fr 2fr 1fr; 
+    grid-template-columns: 4fr 1fr 4fr;
+}
+
+.grid_photo li{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.grid_photo img{
+    width: 100%;
+}
+
+.grid_photo li:nth-child(1){
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}
+
+.grid_photo li:nth-child(2){
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
+}
+
+.right_sect{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    
+}
+
+#point_right{
+    align-self: center;
 }
 
 .Services #content{
     justify-content: center;
 }
 
-.grid_photo img{
-    width: 329px;
-}
 
-.grid_photo div{
-    width: 329px;
-    height: 677px;
-    display: inline-block; 
-    position: relative;
-    overflow: hidden;
-}
+
 
 .Services .btn_outline{
     background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
@@ -340,13 +389,13 @@ nav ul a{
     height: fit-content;
 }
 
-#about_text{
+.about_text{
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-#about_text ul{
+.about_text ul{
     font-family: 'Roboto Flex';
     font-size: 1.125rem;
     color: rgb(28, 28, 28);
@@ -358,7 +407,7 @@ nav ul a{
     letter-spacing: 0.15%;
 }
 
-#about_text button{
+.about_text button{
     color: rgb(28, 28, 28);
     font-weight: bold;
     background-color: transparent;
@@ -366,7 +415,7 @@ nav ul a{
     cursor: pointer;
 }
 
-#about_text hr{
+.about_text hr{
     height: 1px;
     width: 100%;
 }
@@ -453,7 +502,6 @@ footer{
     background-color: white;
     border-radius: 40px;
     width: 400px;
-
 }
 
 .newsletter #email{
@@ -475,6 +523,7 @@ footer{
     padding: 16px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 /*------------------------Menu page------------------------*/
@@ -855,7 +904,7 @@ table tfoot tr td{
 
 /* FAQ section*/
 
-.faq{
+#faq{
     padding: 120px 80px;
 }
 
@@ -949,3 +998,5 @@ table tfoot tr td{
     font-weight: bold;
     background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
 }
+
+/* Default stuff */
