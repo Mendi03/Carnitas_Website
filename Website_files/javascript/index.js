@@ -38,11 +38,20 @@ function onArrowClick(arrow){
 
 }
 
-
-
-
 // ****************************** Services section ******************************
 
+let right_btn = document.querySelector('.point_right')
+let left_btn = document.querySelector('.point_left')
+const carousel = document.querySelector('.carousel')
+const carouselIndex = parseInt(getComputedStyle(carousel).getPropertyValue('--carousel-index'))
+
+right_btn.addEventListener('click', e => {
+    carousel.style.setProperty('--carousel-index', 1)
+})
+
+left_btn.addEventListener('click', e => {
+    carousel.style.setProperty('--carousel-index', 0)
+})
 
 
 
@@ -64,6 +73,17 @@ btn.addEventListener('click', e => {
             item.classList.add('hide')
         }
     })    
+})
+
+document.addEventListener('scroll', () =>{
+    const toTopButton = document.querySelector('#to-top');
+
+    if (window.scrollY > 200){
+        toTopButton.classList.add('show')
+    }
+    else{
+        toTopButton.classList.remove('show')
+    }
 })
 
 

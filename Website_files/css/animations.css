@@ -1,3 +1,7 @@
+/* html */
+html{
+    scroll-behavior: smooth;
+}
 /* header */
 nav ul a{
     transition: color .6s ease;
@@ -24,6 +28,22 @@ nav ul a:hover{
     text-decoration: underline;
 }
 
+/* To-top button */
+
+#to-top{
+    transition: bottom .2s, box-shadow .2s, transform .2s;
+}
+
+#to-top:hover{
+    bottom: 35px;
+    box-shadow: 3px 4px 2px  rgba(28, 28, 28,0.5);
+}
+
+#to-top.show{
+    transform: scale(1);
+}
+
+
 /* -------------------------------------------------------- Home Page ---------------------------------------------------------------*/
 
 /* Dishes section */
@@ -32,7 +52,6 @@ nav ul a:hover{
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 0 80px;
     overflow: hidden;
 }
 
@@ -62,6 +81,24 @@ nav ul a:hover{
     align-content: center;
 }
 
+/* Dishes section */
+
+.carousel{
+    --carousel-index: 0;
+    --translate-val: -100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    transform: translateX(calc(var(--carousel-index) * var(--translate-val)));
+    transition: transform 450ms ease-in-out;
+}
+
+.carousel > .info{
+    display: flex;
+    max-width: 100%;
+    gap: 5%;
+    align-items: center;
+}
 
 /* About section */
 
@@ -97,3 +134,27 @@ nav ul a:hover{
     }
 }
 
+/* -------------------------------------------------------- Contact Page ---------------------------------------------------------------*/
+
+/* FAQ section */
+
+.questions li{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Images/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: top 28px left 34px;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.3);
+}
+
+.answer{
+    color: rgb(28, 28, 28);
+    opacity: 100%;
+    padding-left: 10px;
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+}
