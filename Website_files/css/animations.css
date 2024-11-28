@@ -134,6 +134,29 @@ nav ul a:hover{
     }
 }
 
+/* -------------------------------------------------------- Menu Page ---------------------------------------------------------------*/
+
+/* Side dishes */
+.s_card{
+    transition: box-shadow .2s ease;
+
+}
+.s_card:hover{
+    box-shadow: 4px 4px 15px rgba(28, 28, 28, 0.65);
+}
+
+/* Package Plans */
+
+.plan_nav li{
+    transition: color .2s ease-in-out;
+}
+
+.plan_nav .selected{
+    transition: color .2s ease-in-out;
+    color: white;
+    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+}
+
 /* -------------------------------------------------------- Contact Page ---------------------------------------------------------------*/
 
 /* FAQ section */
