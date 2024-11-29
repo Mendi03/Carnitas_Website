@@ -651,6 +651,9 @@ footer{
     
 }
 
+#price{
+    display: flex;
+}
 
 sub{
     font-size: 1rem;
@@ -686,7 +689,7 @@ sup{
     background-color: rgba(28, 28, 28, 0.25);
 }
 
-.plan_card .details ul{
+.plan_card .details{
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -694,7 +697,7 @@ sup{
    
 }
 
-.plan_card .details ul li{
+.plan_card .details li{
     font-family: 'Roboto Flex';
     justify-content: center;
     align-items: center;

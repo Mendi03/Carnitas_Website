@@ -156,6 +156,10 @@ nav ul a:hover{
     color: white;
     background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
 }
+/* 
+.details li{
+    transition: color .2s ease-in-out;
+} */
 
 /* -------------------------------------------------------- Contact Page ---------------------------------------------------------------*/
 
