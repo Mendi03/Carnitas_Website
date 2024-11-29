@@ -1,15 +1,59 @@
-// ****************************** Dishes section ******************************
+// ****************************** Default stuff ******************************
+
+document.addEventListener('scroll', () =>{
+    const toTopButton = document.querySelector('#to-top');
+
+    if (window.scrollY > 200){
+        toTopButton.classList.add('show')
+    }
+    else{
+        toTopButton.classList.remove('show')
+    }
+})
+
 document.addEventListener('click', e => {
+    // Dishes section 
     let arrow
+
     if (e.target.matches('.arrow')){
         arrow = e.target
-    } else {
-        arrow = e.target.closest('.arrow')
-    }
+    } 
+    // do not delete comment since it could be used later
+    // else {
+    //     arrow = e.target.closest('.arrow')
+    // }
     if (arrow != null) {
         onArrowClick(arrow)
     }
+
+    // Services Section
+
+    let point
+
+    if (e.target.matches('.pointer')){
+        point = e.target
+    } 
+
+    if (point != null) {
+        servicesClick(point)
+    }
+
+    //about section
+
+    let read_btn
+
+    if (e.target.matches('.about_text button')){
+        read_btn = e.target
+    } 
+
+    if (read_btn != null) {
+        showText(read_btn)
+    }
 })
+
+// ****************************** Index page ******************************
+
+// Dishes section
 
 function onArrowClick(arrow){
     const slider = arrow.closest('.container').querySelector('.slider')
@@ -38,29 +82,26 @@ function onArrowClick(arrow){
 
 }
 
-// ****************************** Services section ******************************
+// Services section 
 
-let right_btn = document.querySelector('.point_right')
-let left_btn = document.querySelector('.point_left')
-const carousel = document.querySelector('.carousel')
-const carouselIndex = parseInt(getComputedStyle(carousel).getPropertyValue('--carousel-index'))
+function servicesClick(point){
+    const carousel = point.closest('.carousel')
 
-right_btn.addEventListener('click', e => {
-    carousel.style.setProperty('--carousel-index', 1)
-})
+    if(point.classList.contains('right')){
+        carousel.style.setProperty('--carousel-index', 1)
+    }
 
-left_btn.addEventListener('click', e => {
-    carousel.style.setProperty('--carousel-index', 0)
-})
+    if(point.classList.contains('left')){
+        carousel.style.setProperty('--carousel-index', 0)
+    }
+}
 
+// About section
 
+function showText(read_btn){
+    let parent = read_btn.closest('.about_text')
+    let extra_text = parent.querySelectorAll('.read_more')
 
-// ****************************** About section ***************************
-
-let btn = document.querySelector('.about_text button')
-let extra_text = document.querySelectorAll('.read_more')
-
-btn.addEventListener('click', e => {
     extra_text.forEach(item => {
         if(item.classList == 'read_more hide')
         {
@@ -73,17 +114,8 @@ btn.addEventListener('click', e => {
             item.classList.add('hide')
         }
     })    
-})
+}
 
-document.addEventListener('scroll', () =>{
-    const toTopButton = document.querySelector('#to-top');
 
-    if (window.scrollY > 200){
-        toTopButton.classList.add('show')
-    }
-    else{
-        toTopButton.classList.remove('show')
-    }
-})
 
 
