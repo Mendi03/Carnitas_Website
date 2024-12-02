@@ -3,8 +3,31 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
-    
+}
+
+:root{
+    /* used colors */
+    --p_red: rgba(222, 59, 38, 1.0);
+    --s_yellow: rgba(255, 183, 1.0);
+    --brand_gradient: linear-gradient(to right, var(--p_red) , var(--s_yellow));
+    --white: rgba(255, 255, 255, 1.0);
+    --black: rgba(28, 28, 28, 1.0);
+    --black75: rgba(28, 28, 28, 0.75);
+    --black50: rgba(28, 28, 28, 0.5);
+    --black25: rgba(28, 28, 28, 0.25);
+    --black10: rgba(28, 28, 28, 0.10);
+    --black5: rgba(28, 28, 28, 0.05);
+
+    /* padding and margin */
+    --border-tb: 120px; 
+    --border-sides: 80px;
+    --slider-padding: 5rem;
+
+    /* image dimensions dish section */
+    --img-dimensions: 280px;
+
+    /* Dish slider */
+    --items-per-screen: 3;
 }
 
 /* Default Typography */
@@ -17,7 +40,7 @@ html {
 h1{
     font-size: 4.624rem;
     text-transform: uppercase;
-    color: rgb(28, 28, 28);
+    color: var(--black);
     font-weight: bold;
 }
 
@@ -25,21 +48,21 @@ h2{
     font-size: 4.110rem;
     font-weight: normal;
     text-transform: uppercase;
-    color: rgb(28, 28, 28);
+    color: var(--black);
 }
 
 h3{
     font-size: 3.247rem;
     font-weight: normal;
     text-transform: capitalize;
-    color: rgb(28, 28, 28);
+    color: var(--black);
 }
 
 h4{
     font-size: 1.802rem;
     font-weight: normal;
     text-transform: capitalize;
-    color: rgb(28, 28, 28);
+    color: var(--black);
 }
 
 h5{
@@ -47,17 +70,16 @@ h5{
     font-weight: normal;
     font-family: 'Roboto Serif';
     text-transform: capitalize;
-    color: rgb(222, 59, 38);
+    color: var(--p_red);
     font-style: italic;
 }
 
 
 p{
-    color: rgb(28, 28, 28);
+    color: var(--black75);
     font-family: 'Roboto Flex';
     font-weight: normal;
     font-size: 1.125rem;
-    opacity: 75%;
     letter-spacing: 0.15%;
     line-height: 22px;
 }
@@ -69,7 +91,7 @@ p{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: var(--border-sides);
     gap: 24px;
 }
 
@@ -77,16 +99,16 @@ hr{
     width: 92px;
     border: none;
     height: 5px;
-    color: rgb(222, 59, 38);  /* old IE */
-    background-color: rgb(222, 59, 38);  /* Modern Browsers */
+    color: var(--p_red);  /* old IE */
+    background-color: var(--p_red);  /* Modern Browsers */
 }
 
 .btn_outline{
-    background-color: rgb(255, 183, 31);
+    background-color: var(--s_yellow);
     padding: 24px 48px;
     border-radius: 32px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 1rem;
     font-family: 'Arvo';
     font-weight: bold;
@@ -107,9 +129,9 @@ form textarea:focus{
     width: 40px;
     height: 40px;
     padding: 10px;
-    border: 1px solid rgb(28, 28, 28);
+    border: 1px solid var(--black);
     border-radius: 14px;
-    background-color: white;
+    background-color: var(--white);
     transform: scale(0);
     cursor: pointer;
 }
@@ -118,11 +140,11 @@ form textarea:focus{
 
 header{
     display: flex;
-    background-color: rgb(222, 59, 38);
+    background-color: var(--p_red);
     font-family: 'Roboto Flex', 'Arvo';
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px;
+    padding: 0 var(--border-sides);
     height: 88px;
 }
 header div{
@@ -141,7 +163,7 @@ nav ul{
 
 nav ul a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 1.125rem;
     letter-spacing: 0.15%;
 }
@@ -152,7 +174,7 @@ nav ul a{
 
 .Hero{
     display: flex;
-    padding: 0 80px;
+    padding: 0 var(--border-sides);
     gap: 16px;
     align-items: center;
     justify-content: space-between;
@@ -160,7 +182,7 @@ nav ul a{
 }
 
 .Hero .btn_outline{
-    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+    background-image: var(--brand_gradient);
 }
 
 #content{
@@ -178,13 +200,9 @@ nav ul a{
 
 /* Dishes Section */
 
-:root{
-    --slider-padding: 5rem;
-}
-
 .Dishes{
     background-color: rgba(255, 183, 31, .05);
-    padding: 120px 0px;
+    padding: var(--border-tb) 0px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -195,7 +213,7 @@ nav ul a{
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin: 0px 80px;
+    margin: 0px var(--border-sides);
 }
 
 
@@ -209,7 +227,7 @@ nav ul a{
     align-items: center;
     text-align: center;
     gap: 32px;
-    width: 280px;
+    width: var(--img-dimensions);
     /* background-color: rgba(0, 0, 255, 0.3) */
 }
 
@@ -220,15 +238,15 @@ nav ul a{
 
 .card div{
     border-radius: 50%;
-    width: 280px;
-    height: 280px;
+    width: var(--img-dimensions);
+    height: var(--img-dimensions);
     display: inline-block; 
     position: relative;
     overflow: hidden;
 }
 
 .card img{
-    width: 280px;
+    width: var(--img-dimensions);
 }
 
 .carousel .show{
@@ -245,13 +263,13 @@ nav ul a{
 /* Services section */
 
 .Services{
-    padding: 120px 0px;
+    padding: var(--border-tb) 0px;
     display: flex;
     flex-direction: column;
 }
 
 .container2{
-    margin: 0px 80px;
+    margin: 0px var(--border-sides);
     overflow: hidden;
 }
 
@@ -306,30 +324,30 @@ nav ul a{
 }
 
 .Services .btn_outline{
-    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+    background-image: var(--brand_gradient)
 }
 
 /* Yellow Banner */
 
 .banner{
-    background-color: rgb(255, 183, 31);
-    padding: 120px 80px;
+    background-color: var(--s_yellow);
+    padding: var(--border-tb) var(--border-sides);
     text-align: center;
 }
 
 .banner h3{
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-transform: uppercase;
 }
 
 .banner span{
-    color: rgb(222, 59, 38);
+    color: var(--p_red);
 }
 
 /* Timeline */
 
 .timeline{
-    padding: 120px 160px;
+    padding: var(--border-tb) 160px;
     display: flex;
     flex-direction: column;
 }
@@ -363,7 +381,7 @@ nav ul a{
 /* About */
 
 .about{
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
     background-color:rgba(255, 183, 31, .05);
     display: flex;
     flex-direction: row;
@@ -399,8 +417,7 @@ nav ul a{
 .about_text ul{
     font-family: 'Roboto Flex';
     font-size: 1.125rem;
-    color: rgb(28, 28, 28);
-    opacity: 75%;
+    color: var(--black75);
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -409,7 +426,7 @@ nav ul a{
 }
 
 .about_text button{
-    color: rgb(28, 28, 28);
+    color: var(--black);
     font-weight: bold;
     background-color: transparent;
     border-color: transparent;
@@ -424,7 +441,7 @@ nav ul a{
 /* Important section */
 
 .important{
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
     text-align: center;
     font-family: 'Roboto Serif';
 }
@@ -437,9 +454,9 @@ footer{
 }
 
 .top{
-    background-color: rgb(222, 59, 38);
+    background-color: var(--p_red);
     display: flex;
-    padding: 80px;
+    padding: var(--border-sides);
     gap: 160px;
     
 }
@@ -452,13 +469,12 @@ footer{
 }
 
 .top div h3{
-    color: white;
+    color: var(--white);
     text-transform: uppercase;
 }
 
 .top div p{
-    color: white;
-    opacity: 100%;
+    color: var(--white);
 }
 
 .top #subtitle{
@@ -467,8 +483,8 @@ footer{
 }
 
 .top div hr{
-    color: rgb(255, 183, 31);  /* old IE */
-    background-color: rgb(255, 183, 31);  /* Modern Browsers */
+    color: var(--s_yellow);  /* old IE */
+    background-color: var(--s_yellow);  /* Modern Browsers */
 }
 
 #socials{
@@ -486,27 +502,26 @@ footer{
     display: flex;
     flex-direction: row;
     gap: 24px;
-    background-color: rgb(255, 183, 31);
-    padding: 40px 80px;
+    background-color: var(--s_yellow);
+    padding: 40px var(--border-sides);
     justify-content: center;
     align-items: center;
 }
 
 .bottom p{
-    color: rgb(28, 28, 28);
-    opacity: 100%;
+    color: var(--black);
 }
 
 .newsletter{
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 40px;
     width: 400px;
 }
 
 .newsletter #email{
-    color: rgb(28, 28, 28);
+    color: var(--black);
     font-family: 'Roboto Flex';
     font-weight: normal;
     font-size: 1.125rem;
@@ -520,7 +535,7 @@ footer{
 .newsletter #btn{
     font-family: 'Arvo';
     text-transform: uppercase;
-    color: rgb(222, 59, 38);
+    color: var(--p_red);
     padding: 16px;
     background-color: transparent;
     border: none;
@@ -540,12 +555,12 @@ footer{
 
 .little_hero div{
     background-color: rgba(222, 59, 38, .6);
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
     width: 100%;
 }
 
 .little_hero h1{
-    color: white;
+    color: var(--white);
 }
 
 /* Package Plans */
@@ -560,11 +575,11 @@ footer{
     margin-bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgb(255, 183, 31);
+    background-color: var(--s_yellow);
 }
 
 #pickup #subtitle h2{
-    color: white;
+    color: var(--white);
 }
 
 #pickup #frame{
@@ -573,7 +588,7 @@ footer{
     justify-content: center;
     width: 50%;
     background-color: rgba(255, 183, 31, 0.1);
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
    
 }
 
@@ -589,16 +604,16 @@ footer{
     margin-bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgb(222, 59, 38);
+    background-color: var(--p_red);
 }
 
 #on_site #subtitle hr{
-    color: rgb(255, 183, 31);
-    background-color: rgb(255, 183, 31);
+    color: var(--s_yellow);
+    background-color: var(--s_yellow);
 }
 
 #on_site #subtitle h2{
-    color: white;
+    color: var(--white);
 }
 
 #on_site #frame{
@@ -607,7 +622,7 @@ footer{
     justify-content: center;
     width: 50%;
     background-color: rgba(255, 183, 31, 0.1);
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
    
 }
 
@@ -615,10 +630,10 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: white;
+    background-color: var(--white);
     width: fit-content;
     border-style: solid;
-    border-color: rgb(28, 28, 28);
+    border-color: var(--black);
     border-width: 1px;
     border-radius: 16px;
     padding: 24px;
@@ -646,8 +661,8 @@ footer{
     /* border-style: solid;
     border-width: 1px; */
     border-radius: 40px;
-    color: rgb(28, 28, 28);
-    
+    color: var(--black);
+    cursor: pointer;
 }
 
 #price{
@@ -663,7 +678,7 @@ sub{
 }
 
 /* .plan_nav ul li:nth-child(1) a{
-    color: white;
+    color: var(--white);
 } */
 
 
@@ -706,7 +721,7 @@ sup{
 .y-detail{
     background-image: url('../Images/check-circle.svg');
     background-repeat: no-repeat;
-    color: rgb(28, 28, 28);
+    color: var(--black);
 }
 
 .x-detail{
@@ -721,26 +736,26 @@ sup{
     justify-content: center;
     text-transform: uppercase;
     font-family: 'Arvo', 'Roboto Flex';
-    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+    background-image: var(--brand_gradient)
 }
 
 /* Menu banner */
 
 #menu_banner{
-    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
-    padding: 120px;
+    background-image: var(--brand_gradient);
+    padding: var(--border-tb);
     justify-content: center;
     text-align: center;
 }
 
 #menu_banner h2{
-    color: white;
+    color: var(--white);
 }
 
 /* Table */
 
 .table{
-    padding: 120px 240px;
+    padding: var(--border-tb) 240px;
 }
 
 table{
@@ -758,15 +773,15 @@ td{
 table th,
 tfoot td{
     text-align: start;
-    background-color: rgb(222, 59, 38);
+    background-color: var(--p_red);
 }
 
 table thead tr th:nth-last-child(1),
 table thead tr th:nth-last-child(2){
     text-align: center;
     text-transform: uppercase;
-    color: white;
-    width: 120px;
+    color: var(--white);
+    width: var(--border-tb);
 }
 
 table tbody tr td:nth-last-child(1),
@@ -779,16 +794,16 @@ table tbody tr td:nth-last-child(2)
 table thead tr th:nth-child(1){
     text-align: start;
     text-transform: uppercase;
-    color: white;
+    color: var(--white);
 }
 
 table tbody tr:nth-child(1),
 table tbody tr:nth-child(8){
-    background-color: rgb(255, 183, 31);
+    background-color: var(--s_yellow);
     text-align: start;
     text-transform: uppercase;
     font-weight: bold;
-    color: white;
+    color: var(--white);
 }
 
 table tbody tr{
@@ -805,14 +820,14 @@ table tbody tr:nth-child(17){
 table tfoot tr td{
     font-family: 'Roboto Flex';
     font-weight: normal;
-    color: white;
+    color: var(--white);
 }
 
 /* Sides section */
 
 .sides{
     background-color: rgba(255, 183, 31,0.1);
-    padding: 120px 160px;
+    padding: var(--border-tb) 160px;
 }
 
 .sides_cards{
@@ -829,13 +844,13 @@ table tfoot tr td{
     flex-direction: column;
     width: fit-content;
     align-items: start;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: 5px 5px 15px rgba(28, 28, 28, 0.3);
 }
 
 #card_img{
     width: 400px;
-    height: 280px;
+    height: var(--img-dimensions);
     display: inline-block; 
     position: relative;
     overflow: hidden;
@@ -866,17 +881,17 @@ table tfoot tr td{
     border: none;
     height: 1px;
     background: #000;
-    background: repeating-linear-gradient(90deg,rgba(28, 28, 28, 0.75),rgba(28, 28, 28, 0.75) 6px,transparent 6px,transparent 12px);
+    background: repeating-linear-gradient(90deg,var(--black75),var(--black75) 6px,transparent 6px,transparent 12px);
 }
 
 #s_and_price span{
-    color: rgb(222, 59, 38);
+    color: var(--p_red);
 }
 
 /* Other dishes */
 
 .other{
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
 }
 
 .other h3{
@@ -906,18 +921,18 @@ table tfoot tr td{
 
 .little_hero2 div{
     background-color: rgba(222, 59, 38, .6);
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
     width: 100%;
 }
 
 .little_hero2 h1{
-    color: white;
+    color: var(--white);
 }
 
 /* FAQ section*/
 
 #faq{
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
 }
 
 .questions{
@@ -938,14 +953,13 @@ table tfoot tr td{
 
 .answer_content{
     padding-top: 20px;
-    opacity: 100%;
 }
 
 /* Fill-out form */
 
 .fill_form{
     background-color: rgba(255, 183, 31,0.1);
-    padding: 120px 80px;
+    padding: var(--border-tb) var(--border-sides);
 }
 
 .message_form{
@@ -990,7 +1004,229 @@ table tfoot tr td{
 .message_form .btn_outline{
     text-transform: uppercase;
     font-weight: bold;
-    background-image: linear-gradient(to right, rgb(222, 59, 38) , rgb(255, 183, 31));
+    background-image: var(--brand_gradient)
 }
 
-/* Default stuff */
+/* Media queries */
+
+@media (max-width: 1600px) {
+    :root{
+        --border-tb: 60px; 
+        --border-sides: 32px;
+        --items-per-screen: 2;
+        --img-dimensions: 200px;
+    }
+
+    html{
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    :root{
+        
+    }
+
+} 
+
+@media (max-width: 850px) {
+    :root{
+        --border-tb: 40px; 
+        --border-sides: 8px;
+        --items-per-screen: 1;
+    }
+    html{
+        font-size: 10px;
+    }
+
+}
+
+/*------------------------Animation stuff------------------------*/
+
+/* html */
+html{
+    scroll-behavior: smooth;
+}
+/* header */
+nav ul a{
+    transition: color .6s ease;
+}
+
+
+nav ul a:hover{
+    color: var(--s_yellow);
+    text-decoration: underline;
+}
+
+/* button */
+.btn_outline{
+    transition: box-shadow .6s ease;
+}
+
+.btn_outline:hover{
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px  rgba(28, 28, 28,0.5);
+}
+
+/* footer button */
+.newsletter #btn:hover{
+    text-decoration: underline;
+}
+
+/* To-top button */
+
+#to-top{
+    transition: bottom .2s, box-shadow .2s, transform .2s;
+}
+
+#to-top:hover{
+    bottom: 35px;
+    box-shadow: 3px 4px 2px  rgba(28, 28, 28,0.5);
+}
+
+#to-top.show{
+    transform: scale(1);
+}
+
+
+/* -------------------------------------------------------- Home Page ---------------------------------------------------------------*/
+
+/* Dishes section */
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider{
+    
+    --slider-index: 0;
+    --translate-value: calc(-100% / var(--items-per-screen));
+    display: flex;
+    width: calc(100% - 2* var(--slider-padding)); 
+    /* overflow: hidden; */
+    transform: translateX(calc(var(--slider-index) * var(--translate-value)));
+    transition: transform 450ms ease-in-out;
+} 
+
+.slider > .thing{
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    margin: 0;
+    /* background-color: rgb(0, 0, 255, 0.2); */
+    justify-items: center;
+}
+
+.handle{
+    width: var(--slider-padding);
+    /* background-color: rgb(255, 0, 0,0.25); */
+    z-index: 10;
+    align-content: center;
+}
+
+/* Dishes section */
+
+.carousel{
+    --carousel-index: 0;
+    --translate-val: -100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    transform: translateX(calc(var(--carousel-index) * var(--translate-val)));
+    transition: transform 450ms ease-in-out;
+}
+
+.carousel > .info{
+    display: flex;
+    max-width: 100%;
+    gap: 5%;
+    align-items: center;
+}
+
+/* About section */
+
+.about_text{
+    transition: display .6s ease;
+}
+
+.about_text button:hover{
+    text-decoration: underline;
+}
+
+.about_text .hide{
+    display: none;
+}
+
+.about_text .show{
+    display: block;
+}
+
+/* Timeline section */
+
+.step{
+    transition: background-color .6s ease, color .6s ease;
+}
+
+.step:hover{
+    background-color: var(--s_yellow);
+    border: none;
+    p,
+    h4{
+        color: var(--white);
+    }
+}
+
+/* -------------------------------------------------------- Menu Page ---------------------------------------------------------------*/
+
+/* Side dishes */
+.s_card{
+    transition: box-shadow .2s ease;
+
+}
+.s_card:hover{
+    box-shadow: 4px 4px 15px rgba(28, 28, 28, 0.65);
+}
+
+/* Package Plans */
+
+.plan_nav li{
+    transition: color .2s ease-in-out;
+}
+
+.plan_nav .selected{
+    transition: color .2s ease-in-out;
+    color: var(--white);
+    background-image: var(--brand_gradient)
+}
+/* 
+.details li{
+    transition: color .2s ease-in-out;
+} */
+
+/* -------------------------------------------------------- Contact Page ---------------------------------------------------------------*/
+
+/* FAQ section */
+
+.questions li{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Images/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: top 28px left 34px;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.3);
+}
+
+.answer{
+    color: var(--black);
+    padding-left: 10px;
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+}
+
