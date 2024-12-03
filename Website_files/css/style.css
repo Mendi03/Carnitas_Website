@@ -25,6 +25,7 @@
 
     /* image dimensions dish section */
     --img-dimensions: 280px;
+    --arrow-dimenions: var(--slider-padding);
 
     /* Dish slider */
     --items-per-screen: 3;
@@ -216,6 +217,9 @@ nav ul a{
     margin: 0px var(--border-sides);
 }
 
+.handle img{
+    width: var(--arrow-dimenions);
+}
 
 /* .handle:hover{
     background-color: rgb(255, 0, 0,0.5);
@@ -319,6 +323,10 @@ nav ul a{
     cursor: pointer;
 }
 
+.pointer{
+    width: var(--arrow-dimenions);
+}
+
 .Services #content{
     justify-content: center;
 }
@@ -347,7 +355,7 @@ nav ul a{
 /* Timeline */
 
 .timeline{
-    padding: var(--border-tb) 160px;
+    padding: var(--border-tb) var(--border-sides);
     display: flex;
     flex-direction: column;
 }
@@ -355,9 +363,16 @@ nav ul a{
 .steps{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 16px;
-    
+    align-items: center;
+}
+
+.steps2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
 }
 
 .step{
@@ -456,24 +471,31 @@ footer{
 .top{
     background-color: var(--p_red);
     display: flex;
+    flex-direction: column;
     padding: var(--border-sides);
-    gap: 160px;
+    gap: 40px;
     
 }
 
-.top div{
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    gap: var(--border-sides);
+}
+
+.contact-info div{
     display: flex;
     flex-direction: column;
     width: 50%;
     gap: 16px;
 }
 
-.top div h3{
+.contact-info h3{
     color: var(--white);
     text-transform: uppercase;
 }
 
-.top div p{
+.contact-info p{
     color: var(--white);
 }
 
@@ -482,7 +504,7 @@ footer{
     margin-bottom: 0px;
 }
 
-.top div hr{
+.contact-info hr{
     color: var(--s_yellow);  /* old IE */
     background-color: var(--s_yellow);  /* Modern Browsers */
 }
@@ -517,7 +539,9 @@ footer{
     flex-direction: row;
     background-color: var(--white);
     border-radius: 40px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+   
 }
 
 .newsletter #email{
@@ -1015,29 +1039,72 @@ table tfoot tr td{
         --border-sides: 32px;
         --items-per-screen: 2;
         --img-dimensions: 200px;
+        --arrow-dimensions: 60px;
+        --last-index: 4;
+    }
+
+    .slider{
+        --last-index: 4;
     }
 
     html{
         font-size: 12px;
     }
 
+    .steps{
+        flex-direction: column;
+    }
+
+    .top{
+        gap: 32px;
+    }
+
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     :root{
         
     }
 
-} 
+}  */
 
-@media (max-width: 850px) {
+@media (max-width: 920px) {
+    /* global stuff & variables */
     :root{
         --border-tb: 40px; 
         --border-sides: 8px;
         --items-per-screen: 1;
+        --arrow-dimensions: 40px;
     }
     html{
         font-size: 10px;
+    }
+
+    /* hero */
+
+    #right_hero{
+        display: none;
+    }
+    .Hero{
+        background-image: url(../Images/carnitas_logo_transparent.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.9);
+        background-blend-mode: overlay;
+        padding: var(--border-tb) var(--border-sides);
+    }
+
+    /* timeline */
+
+    .steps2{
+        flex-direction: column;
+    }
+
+    /* footer */
+
+    .top{
+        gap: 16px;
     }
 
 }
@@ -1102,8 +1169,9 @@ nav ul a:hover{
 }
 
 .slider{
-    
     --slider-index: 0;
+    /* --last-index: has to be increased a new dish in the html is added. var has to be decreased if html dish is removed (change is to be made in css variable) */
+    --last-index: 3;
     --translate-value: calc(-100% / var(--items-per-screen));
     display: flex;
     width: calc(100% - 2* var(--slider-padding)); 
@@ -1127,7 +1195,7 @@ nav ul a:hover{
     align-content: center;
 }
 
-/* Dishes section */
+/* Dishes section Home */
 
 .carousel{
     --carousel-index: 0;

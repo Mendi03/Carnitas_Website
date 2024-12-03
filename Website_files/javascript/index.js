@@ -88,9 +88,10 @@ document.addEventListener('click', e => {
 function onArrowClick(arrow){
     const slider = arrow.closest('.container').querySelector('.slider')
     const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue('--slider-index'))
+    
 
-    //This variable has to be increased a new dish in the html is added. var has to be decreased if html dish is removed
-    const lastIndex = 3
+    //--last-index: has to be increased a new dish in the html is added. var has to be decreased if html dish is removed (change is to be made in css variable)
+    const lastIndex = parseInt(getComputedStyle(slider).getPropertyValue('--last-index'))
     
     if(arrow.classList.contains('left-arrow')) {
         if(sliderIndex - 1 < 0){
