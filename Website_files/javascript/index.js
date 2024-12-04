@@ -91,7 +91,12 @@ function onArrowClick(arrow){
     
 
     //--last-index: has to be increased a new dish in the html is added. var has to be decreased if html dish is removed (change is to be made in css variable)
-    const lastIndex = parseInt(getComputedStyle(slider).getPropertyValue('--last-index'))
+    const root = document.documentElement;
+    const lastIndex = parseInt(getComputedStyle(root).getPropertyValue('--last-index'));
+
+    // if(lastIndex === null){
+    //     lastIndex = 3;
+    // }
     
     if(arrow.classList.contains('left-arrow')) {
         if(sliderIndex - 1 < 0){

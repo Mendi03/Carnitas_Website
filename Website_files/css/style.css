@@ -6,7 +6,7 @@
 }
 
 :root{
-    /* used colors */
+        /* used colors */
     --p_red: rgba(222, 59, 38, 1.0);
     --s_yellow: rgba(255, 183, 1.0);
     --brand_gradient: linear-gradient(to right, var(--p_red) , var(--s_yellow));
@@ -18,17 +18,19 @@
     --black10: rgba(28, 28, 28, 0.10);
     --black5: rgba(28, 28, 28, 0.05);
 
-    /* padding and margin */
+        /* padding and margin */
     --border-tb: 120px; 
     --border-sides: 80px;
     --slider-padding: 5rem;
 
-    /* image dimensions dish section */
+        /* image dimensions dish section */
     --img-dimensions: 280px;
     --arrow-dimenions: var(--slider-padding);
 
-    /* Dish slider */
+        /* Dish slider */
     --items-per-screen: 3;
+            /* --last-index: has to be increased a new dish in the html is added. var has to be decreased if html dish is removed (change is to be made in css variable) */
+    --last-index: 3;
 }
 
 /* Default Typography */
@@ -238,6 +240,7 @@ nav ul a{
 .card h3{
     height: 112px;
     text-align: center;
+    align-self: center;
 }
 
 .card div{
@@ -418,9 +421,13 @@ nav ul a{
 }
 
 
-.about img{
+.parroquia{
     width: 60%;
-    height: fit-content;
+    height: 600px;
+    background-image: url(../Images/parroquia-dolores.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .about_text{
@@ -1043,17 +1050,40 @@ table tfoot tr td{
         --last-index: 4;
     }
 
-    .slider{
-        --last-index: 4;
-    }
-
     html{
         font-size: 12px;
     }
 
+    /* Hero */
+
+    .Hero{
+        padding: var(--border-tb) var(--border-sides);
+    }
+
+    /* Dishes */
+
+    .card h3{
+        height: 80px;
+    }
+
+    /* Timeline */
+
     .steps{
         flex-direction: column;
     }
+
+    .step{
+        width: 340px;
+    }
+
+    /* About */
+
+    .parroquia{
+        width: 50%;
+        /* height: 400px; */
+    }
+
+    /* Footer */
 
     .top{
         gap: 32px;
@@ -1075,6 +1105,7 @@ table tfoot tr td{
         --border-sides: 8px;
         --items-per-screen: 1;
         --arrow-dimensions: 40px;
+        --last-index: 5;
     }
     html{
         font-size: 10px;
@@ -1095,10 +1126,21 @@ table tfoot tr td{
         padding: var(--border-tb) var(--border-sides);
     }
 
+    /* Dishes */
+
+    .card{
+        gap: 24px;
+    }
+
     /* timeline */
 
     .steps2{
         flex-direction: column;
+    }
+
+    .step{
+        width: 300px;
+        min-height: 350px;
     }
 
     /* footer */
@@ -1170,8 +1212,7 @@ nav ul a:hover{
 
 .slider{
     --slider-index: 0;
-    /* --last-index: has to be increased a new dish in the html is added. var has to be decreased if html dish is removed (change is to be made in css variable) */
-    --last-index: 3;
+    
     --translate-value: calc(-100% / var(--items-per-screen));
     display: flex;
     width: calc(100% - 2* var(--slider-padding)); 
