@@ -18,6 +18,10 @@
     --black10: rgba(28, 28, 28, 0.10);
     --black5: rgba(28, 28, 28, 0.05);
 
+        /* Header menu */
+
+    --menu-size: 130px;
+
         /* padding and margin */
     --border-tb: 120px; 
     --border-sides: 80px;
@@ -147,31 +151,45 @@ header{
     font-family: 'Roboto Flex', 'Arvo';
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--border-sides);
-    height: 88px;
+    padding: 12px var(--border-sides);
 }
 header div{
     display: flex;
     align-items: center;
     gap: 32px;
+    width: 100%;
+    justify-content: space-between;
 }
 
-nav ul{
-   
+.desktop_nav{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop_nav ul{
     list-style: none;
     display: flex;
     gap: 32px;
-
 }
 
-nav ul a{
+.desktop_nav ul a{
     text-decoration: none;
     color: var(--white);
     font-size: 1.125rem;
     letter-spacing: 0.15%;
 }
 
-
+header .sidebar{
+    display: none;
+    width: fit-content;
+}
+header .sidebar img{
+    width: 28px;
+    height: 28px;
+}
 
 /* Hero */
 
@@ -240,7 +258,6 @@ nav ul a{
 .card h3{
     height: 112px;
     text-align: center;
-    align-self: center;
 }
 
 .card div{
@@ -254,6 +271,21 @@ nav ul a{
 
 .card img{
     width: var(--img-dimensions);
+}
+
+.carousel{
+    --carousel-index: 0;
+    --translate-val: -100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+}
+
+.carousel > .info{
+    display: flex;
+    max-width: 100%;
+    gap: 5%;
+    align-items: center;
 }
 
 .carousel .show{
@@ -296,7 +328,7 @@ nav ul a{
 
 .grid_photo li{
     width: 100%;
-    height: 600px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -305,11 +337,21 @@ nav ul a{
 }
 
 .grid_photo li:nth-child(1){
+    background-image: url(../Images/Cazo_vertical.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(222, 59, 38, 1.0);
+    background-blend-mode: overlay;
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
 }
 
 .grid_photo li:nth-child(2){
+    background-image: url(../Images/Tacos_Bright.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     grid-row: 2 / span 2;
     grid-column: 2 / span 2;
 }
@@ -1038,119 +1080,6 @@ table tfoot tr td{
     background-image: var(--brand_gradient)
 }
 
-/* Media queries */
-
-@media (max-width: 1600px) {
-    :root{
-        --border-tb: 60px; 
-        --border-sides: 32px;
-        --items-per-screen: 2;
-        --img-dimensions: 200px;
-        --arrow-dimensions: 60px;
-        --last-index: 4;
-    }
-
-    html{
-        font-size: 12px;
-    }
-
-    /* Hero */
-
-    .Hero{
-        padding: var(--border-tb) var(--border-sides);
-    }
-
-    /* Dishes */
-
-    .card h3{
-        height: 80px;
-    }
-
-    /* Timeline */
-
-    .steps{
-        flex-direction: column;
-    }
-
-    .step{
-        width: 340px;
-    }
-
-    /* About */
-
-    .parroquia{
-        width: 50%;
-        /* height: 400px; */
-    }
-
-    /* Footer */
-
-    .top{
-        gap: 32px;
-    }
-
-}
-
-/* @media (max-width: 1000px) {
-    :root{
-        
-    }
-
-}  */
-
-@media (max-width: 920px) {
-    /* global stuff & variables */
-    :root{
-        --border-tb: 40px; 
-        --border-sides: 8px;
-        --items-per-screen: 1;
-        --arrow-dimensions: 40px;
-        --last-index: 5;
-    }
-    html{
-        font-size: 10px;
-    }
-
-    /* hero */
-
-    #right_hero{
-        display: none;
-    }
-    .Hero{
-        background-image: url(../Images/carnitas_logo_transparent.png);
-        background-position: center;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, 0.9);
-        background-blend-mode: overlay;
-        padding: var(--border-tb) var(--border-sides);
-    }
-
-    /* Dishes */
-
-    .card{
-        gap: 24px;
-    }
-
-    /* timeline */
-
-    .steps2{
-        flex-direction: column;
-    }
-
-    .step{
-        width: 300px;
-        min-height: 350px;
-    }
-
-    /* footer */
-
-    .top{
-        gap: 16px;
-    }
-
-}
-
 /*------------------------Animation stuff------------------------*/
 
 /* html */
@@ -1158,12 +1087,12 @@ html{
     scroll-behavior: smooth;
 }
 /* header */
-nav ul a{
+.desktop_nav ul a{
     transition: color .6s ease;
 }
 
 
-nav ul a:hover{
+.desktop_nav ul a:hover{
     color: var(--s_yellow);
     text-decoration: underline;
 }
@@ -1231,7 +1160,7 @@ nav ul a:hover{
 
 .handle{
     width: var(--slider-padding);
-    /* background-color: rgb(255, 0, 0,0.25); */
+    background-color: rgb(255, 250, 244);
     z-index: 10;
     align-content: center;
 }
@@ -1239,21 +1168,11 @@ nav ul a:hover{
 /* Dishes section Home */
 
 .carousel{
-    --carousel-index: 0;
-    --translate-val: -100%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
     transform: translateX(calc(var(--carousel-index) * var(--translate-val)));
     transition: transform 450ms ease-in-out;
 }
 
-.carousel > .info{
-    display: flex;
-    max-width: 100%;
-    gap: 5%;
-    align-items: center;
-}
+
 
 /* About section */
 
@@ -1339,3 +1258,252 @@ nav ul a:hover{
     transition: max-height 0.2s ease-out;
 }
 
+/* Media queries */
+
+@media (max-width: 1600px) {
+    :root{
+        --border-tb: 60px; 
+        --border-sides: 32px;
+        --items-per-screen: 2;
+        --img-dimensions: 200px;
+        --arrow-dimensions: 60px;
+        --last-index: 4;
+    }
+
+    html{
+        font-size: 12px;
+    }
+
+    /* Hero */
+
+    .Hero{
+        padding: var(--border-tb) var(--border-sides);
+    }
+
+    /* Dishes */
+
+    .card h3{
+        height: 80px;
+    }
+
+    /* services */
+
+    .carousel > .info{
+        column-gap: 2%;
+    }
+    .right_sect{
+        gap: 2%;
+    }
+
+    /* Timeline */
+
+    .steps{
+        flex-direction: column;
+    }
+
+    .step{
+        width: 340px;
+    }
+
+    /* About */
+
+    .parroquia{
+        width: 50%;
+        /* height: 400px; */
+    }
+
+    /* Footer */
+
+    .top{
+        gap: 32px;
+    }
+
+}
+
+/* @media (max-width: 1000px) {
+    :root{
+        
+    }
+
+}  */
+
+@media (max-width: 920px) {
+    /* global stuff & variables */
+    :root{
+        --border-tb: 40px; 
+        --border-sides: 8px;
+        --items-per-screen: 1;
+        --arrow-dimensions: 40px;
+        --last-index: 5;
+    }
+    html{
+        font-size: 10px;
+    }
+
+    /* Header */
+
+    header .sidebar{
+        display: flex;
+    }
+ 
+    .desktop_nav{
+        --move: 1;
+        flex-direction: column;
+        position: absolute;
+        overflow: hidden;
+        justify-content: start;
+        align-items: start;
+        max-width: var(--menu-size);
+        height: 3000px;
+        padding: 12px var(--border-sides);
+        top: 0;
+        right: 0;
+        transform: translateX(calc(var(--move) * var(--menu-size)));
+        background-color: var(--s_yellow);
+        z-index: 20;
+        gap: 24px;
+    } 
+
+    .desktop_nav ul a:hover{
+        color: var(--p_red);
+        text-decoration: underline;
+    }
+
+    .desktop_nav ul{
+        flex-direction: column;
+        gap: 24px;
+        padding-left: 16px;
+    }
+
+    header .btn_outline{
+        background-color: var(--p_red);
+        width: 100%;
+        padding: 12px;
+        justify-content: center;
+    }
+
+    /* hero */
+
+    #right_hero{
+        display: none;
+    }
+    .Hero{
+        background-image: url(../Images/carnitas_logo_transparent.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.9);
+        background-blend-mode: overlay;
+        padding: var(--border-tb) var(--border-sides);
+    }
+
+    /* Dishes */
+
+    .card{
+        gap: 24px;
+    }
+
+    /* timeline */
+
+    .steps2{
+        flex-direction: column;
+        min-width: 120px;
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .step{
+        min-width: 120px;
+        max-width: 350px;
+        width: 100%;
+        min-height: 350px;
+    }
+
+    /* About */
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about div{
+        width: 100%;
+    }
+
+    .parroquia{
+        height: 350px;
+    }
+
+    /* footer */
+
+    .top{
+        gap: 16px;
+    }
+
+    .newsletter{
+        max-width: 50%;
+    }
+
+}
+
+@media (max-width: 690px) {
+    :root{
+        --img-dimensions: 150px;
+        --arrow-dimensions: 50px;
+    }
+
+    /* Dishes */
+
+    /* .card div{
+        
+    } */
+
+    /* Services */
+
+    .carousel > .info{
+        flex-direction: column;
+    }
+
+    .grid_photo{
+        width: 80%;
+    }
+
+    .grid_photo ul{
+        grid-template-rows: 1fr; 
+        grid-template-columns: 1fr;
+    } 
+
+    .grid_photo ul li{
+        max-height: 320px;
+    } 
+
+    .grid_photo li:nth-child(1){
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .grid_photo li:nth-child(2){
+        z-index: -1;
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .right_sect{
+        width: 100%;
+        height: fit-content;
+        gap: 2%;
+    }
+
+    #point{
+        align-self: baseline;
+    }
+
+    /* footer */
+
+    .top{
+        gap: 16px;
+    }
+
+    .newsletter{
+        max-width: 100%;
+    }
+}

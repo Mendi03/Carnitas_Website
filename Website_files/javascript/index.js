@@ -12,6 +12,19 @@ document.addEventListener('scroll', () =>{
 })
 
 document.addEventListener('click', e => {
+    // Header section
+
+    let menu_mobile
+
+    if (e.target.matches('.sidebar img')){
+        menu_mobile = e.target.closest('.sidebar')
+        openMenu(menu_mobile)
+    }
+    else{
+        menu_mobile = null
+        openMenu(menu_mobile)
+    }
+
     // Dishes section 
     let arrow
 
@@ -80,6 +93,29 @@ document.addEventListener('click', e => {
     }
 
 })
+
+
+
+// Header
+
+function openMenu(menu_mobile){
+
+    const side_menu = document.querySelector('.desktop_nav')
+
+    if(menu_mobile == null){
+        side_menu.style.setProperty('--move', 1)
+    }
+
+    else if(menu_mobile.classList.contains('open')){
+        side_menu.style.setProperty('--move', 0)
+    }
+
+    else if(menu_mobile.classList.contains('close')){
+        side_menu.style.setProperty('--move', 1)
+    }
+
+    
+}
 
 // ****************************** Index page ******************************
 
