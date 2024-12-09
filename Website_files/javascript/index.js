@@ -9,6 +9,10 @@ document.addEventListener('scroll', () =>{
     else{
         toTopButton.classList.remove('show')
     }
+
+    let menu_mobile = null
+
+    openMenu(menu_mobile)
 })
 
 document.addEventListener('click', e => {

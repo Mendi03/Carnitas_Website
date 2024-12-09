@@ -29,7 +29,7 @@
 
         /* image dimensions dish section */
     --img-dimensions: 280px;
-    --arrow-dimenions: var(--slider-padding);
+    --arrow-dimensions: 60px;
 
         /* Dish slider */
     --items-per-screen: 3;
@@ -42,6 +42,11 @@
 html {
     font-size: 14px;
     font-family: 'Arvo','Roboto Flex', 'Roboto Serif';
+}
+
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */ 
+    min-width: 300px;
 }
 
 h1{
@@ -141,6 +146,7 @@ form textarea:focus{
     background-color: var(--white);
     transform: scale(0);
     cursor: pointer;
+    z-index: 100;
 }
 
 /* Header menu */
@@ -237,8 +243,45 @@ header .sidebar img{
     margin: 0px var(--border-sides);
 }
 
+#tacos,
+#torta,
+#dorados,
+#gorditas,
+#rice,
+#beans
+{
+    background-size: cover;
+    background-position: center center;
+}
+
+#tacos{
+    background-image: url(../Images/Tacos_Bright.jpg);
+}
+
+#torta{
+    background-image: url(../Images/torta.jpg);
+}
+
+#dorados{
+    background-image: url(../Images/dorados.jpg);
+}
+
+#gorditas{
+    background-image: url(../Images/Tacos_Dark.jpg);
+}
+
+#rice{
+    background-image: url(../Images/cazo_dark.jpg);
+}
+
+#beans{
+    background-image: url(../Images/Cazo_vertical.jpg);
+}
+
+
 .handle img{
-    width: var(--arrow-dimenions);
+    width: var(--arrow-dimensions);
+    height: var(--arrow-dimensions);
 }
 
 /* .handle:hover{
@@ -292,11 +335,11 @@ header .sidebar img{
     display: flex;
  }
  .carousel .hide{
-     display: none;
+    display: none;
  }
  
  .arrow{
-     cursor: pointer;
+    cursor: pointer;
  }
 
 /* Services section */
@@ -369,7 +412,8 @@ header .sidebar img{
 }
 
 .pointer{
-    width: var(--arrow-dimenions);
+    width: var(--arrow-dimensions);
+    height: var(--arrow-dimensions);
 }
 
 .Services #content{
@@ -779,27 +823,27 @@ sup{
 .plan_card .details{
     display: flex;
     flex-direction: column;
-    gap: 12px;
     list-style: inside none;
-   
+    gap: 12px;
 }
 
 .plan_card .details li{
     font-family: 'Roboto Flex';
-    justify-content: center;
-    align-items: center;
+    text-align: start;
     padding-left: 24px;
 }
 
 .y-detail{
     background-image: url('../Images/check-circle.svg');
     background-repeat: no-repeat;
+    background-position: left center;
     color: var(--black);
 }
 
 .x-detail{
     background-image: url('../Images/x-circle.svg');
     background-repeat: no-repeat;
+    background-position: left;
     color: rgba(28, 28, 28,0.5);
 }
 
@@ -828,12 +872,15 @@ sup{
 /* Table */
 
 .table{
-    padding: var(--border-tb) 240px;
+    padding: var(--border-tb) var(--border-sides);
+    display: flex;
+    justify-content: center;
 }
 
 table{
     border-collapse: collapse;
     width: 100%;
+    max-width: 1200px;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -854,7 +901,8 @@ table thead tr th:nth-last-child(2){
     text-align: center;
     text-transform: uppercase;
     color: var(--white);
-    width: var(--border-tb);
+    width: 120px;
+    min-width: 80px;
 }
 
 table tbody tr td:nth-last-child(1),
@@ -900,16 +948,23 @@ table tfoot tr td{
 
 .sides{
     background-color: rgba(255, 183, 31,0.1);
-    padding: var(--border-tb) 160px;
+    padding: var(--border-tb) var(--border-sides);
 }
 
 .sides_cards{
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    height: fit-content;
+    display: flex;
+    /* height: fit-content; */
     width: 100%;
     /* grid-column-gap: 100px; */
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.sides_container{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
 
 .s_card{
@@ -921,19 +976,32 @@ table tfoot tr td{
     box-shadow: 5px 5px 15px rgba(28, 28, 28, 0.3);
 }
 
+.item1 #card_img{
+    background-image: url('../Images/cazo_dark.jpg');
+}
+.item2 #card_img{
+    background-image: url('../Images/dorados.jpg');
+}
+.item3 #card_img{
+    background-image: url('../Images/torta.jpg');
+}
+
 #card_img{
     width: 400px;
-    height: var(--img-dimensions);
+    height: var(--img-dimensions); 
+    background-size: cover;
+    background-position: center center;
     display: inline-block; 
     position: relative;
     overflow: hidden;
 }
 
-.s_card img{
-    width: 400px;
-}
 
-#card_bottom{
+/* .s_card img{
+    width: 400px;
+} */
+
+.card_bottom{
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -1087,6 +1155,10 @@ html{
     scroll-behavior: smooth;
 }
 /* header */
+.desktop_nav{
+    transition: transform .3s ease;
+}
+
 .desktop_nav ul a{
     transition: color .6s ease;
 }
@@ -1266,7 +1338,7 @@ html{
         --border-sides: 32px;
         --items-per-screen: 2;
         --img-dimensions: 200px;
-        --arrow-dimensions: 60px;
+        --arrow-dimensions: 50px;
         --last-index: 4;
     }
 
@@ -1312,6 +1384,24 @@ html{
         /* height: 400px; */
     }
 
+    /* Package plans */
+
+    .plan_card .details li{
+        padding-top: 3px;
+        height: 18px;
+    }
+
+    /* Sides section */
+
+    .sides_cards{
+        flex-direction: column;
+    }
+
+    .card_bottom{
+        gap: 24px;
+        margin-bottom: 16px;
+    }
+
     /* Footer */
 
     .top{
@@ -1336,8 +1426,18 @@ html{
         --arrow-dimensions: 40px;
         --last-index: 5;
     }
+
     html{
         font-size: 10px;
+    }
+
+    #subtitle{
+        margin-bottom: 32px;
+        gap: 12px;
+    }
+
+    #subtitle hr{
+        width: 60px;
     }
 
     /* Header */
@@ -1354,7 +1454,7 @@ html{
         justify-content: start;
         align-items: start;
         max-width: var(--menu-size);
-        height: 3000px;
+        height: 1800px;
         padding: 12px var(--border-sides);
         top: 0;
         right: 0;
@@ -1403,6 +1503,12 @@ html{
         gap: 24px;
     }
 
+    /* Services */
+
+    .grid_photo ul li{
+        max-height: 320px;
+    } 
+
     /* timeline */
 
     .steps2{
@@ -1417,6 +1523,7 @@ html{
         max-width: 350px;
         width: 100%;
         min-height: 350px;
+        padding: 40px;
     }
 
     /* About */
@@ -1433,6 +1540,51 @@ html{
         height: 350px;
     }
 
+    /* Package plans */
+
+    .plan_card{
+        padding: 16px;
+    }
+
+    .plan_card .details{
+        gap: 2px;
+    }
+    .plan_card .details li{
+        padding-top: 3px;
+        height: 18px;
+    }
+
+
+
+    .plan_nav li{
+        width: 57px;
+        height: 44px;
+    }
+
+    sub{
+        padding-bottom: 13px;
+    }
+
+    .y-detail{
+        background-size: 12px;
+    }
+    .x-detail{
+        background-size: 12px;
+    }
+
+    /* Sides section */
+
+    .sides_container{
+        flex-direction: column;
+    }
+
+    .card_bottom{
+        gap: 16px;
+        margin-bottom: 8px;
+    }
+
+
+
     /* footer */
 
     .top{
@@ -1448,7 +1600,19 @@ html{
 @media (max-width: 690px) {
     :root{
         --img-dimensions: 150px;
-        --arrow-dimensions: 50px;
+    }
+
+    html p{
+        line-height: 20px;
+    }
+
+    #to-top{
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #to-top:hover{
+        bottom: 20px;
     }
 
     /* Dishes */
@@ -1459,8 +1623,16 @@ html{
 
     /* Services */
 
+
     .carousel > .info{
+        gap: 24px;
+        justify-content: space-between;
+    }
+    .carousel > .onsite{
         flex-direction: column;
+    }
+    .carousel > .pickup{
+        flex-direction: column-reverse;
     }
 
     .grid_photo{
@@ -1470,10 +1642,6 @@ html{
     .grid_photo ul{
         grid-template-rows: 1fr; 
         grid-template-columns: 1fr;
-    } 
-
-    .grid_photo ul li{
-        max-height: 320px;
     } 
 
     .grid_photo li:nth-child(1){
@@ -1497,7 +1665,62 @@ html{
         align-self: baseline;
     }
 
+    /* Package plans */
+
+    .packages #subtitle{
+        padding: 40px;
+    }
+
+    #pickup #subtitle,
+    #pickup #frame,
+    #on_site #subtitle,
+    #on_site #frame{
+        width: 100%;
+    }
+
+    #pickup{
+        flex-direction: column;
+    }
+
+    #on_site{
+        flex-direction: column-reverse;
+    }
+
+    /* Table */
+
+    th,
+    td{
+    padding: 8px 16px;
+    }
+
+    /* Sides */
+
+    .s_card{
+        max-width: 250px;
+    }
+
+    #card_img{
+        width: 250px;
+    }
+
+    /* Fill out form */
+
+    .p_info{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form_inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
     /* footer */
+
+    .contact-info #subtitle h3{
+        font-size: 28px;
+    }
 
     .top{
         gap: 16px;

@@ -18,22 +18,28 @@
 <body>
 
     <!-- header -->
-    <header>
-        
-       <div>
-           <a href="index.html"><img src="Images\carnitas_logo_transparent.png" width="50" height="56" alt="Carnitas logo"></a>
-           <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html#menu_banner">Menu</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html#faq">FAQ</a></li>
-            </ul>
-           </nav>
-       </div>
-
-       <a href="menu.html" class="btn_outline"> ORDER NOW </a>
-    </header>
+    <header>   
+        <div>
+            <a href="">
+                 <img src="Images\carnitas_logo_transparent.png" width="50" height="56" alt="Carnitas logo">
+             </a>
+             <nav class="desktop_nav">
+                 <div class="sidebar close">
+                     <img src="Images/x.svg" alt="">
+                 </div>
+                 <ul>
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="menu.html#menu_banner">Menu</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+                     <li><a href="contact.html#faq">FAQ</a></li>
+                 </ul>
+                 <a href="menu.html" class="btn_outline"> ORDER NOW </a>
+             </nav>
+             <div class="sidebar open">
+                 <img src="Images/menu.svg" alt="">
+             </div>
+        </div>
+     </header>
 
     <!-- Scroll to top button -->
 
@@ -106,14 +112,15 @@
                 <h2>Have any other questions or concerns? <br> Send us a message</h2>
             </div>
 
-            <div class="p_info">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
-                <input type="number" placeholder="Phone Number">
-            </div>
-
-            <div class="message">
-                <textarea name="" id="" placeholder="Message"></textarea>
+            <div class="form_inputs">
+                <div class="p_info">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                    <input type="number" placeholder="Phone Number">
+                </div>
+                <div class="message">
+                    <textarea name="" id="" placeholder="Message"></textarea>
+                </div>
             </div>
 
             <div>

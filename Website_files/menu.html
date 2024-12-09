@@ -19,22 +19,28 @@
 <body>
 
     <!-- header -->
-    <header>
-        
-       <div>
-           <a href="index.html"><img src="Images\carnitas_logo_transparent.png" width="50" height="56" alt="Carnitas logo"></a>
-           <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html#menu_banner">Menu</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html#faq">FAQ</a></li>
-            </ul>
-           </nav>
-       </div>
-
-       <a href="menu.html" class="btn_outline"> ORDER NOW </a>
-    </header>
+    <header>   
+        <div>
+            <a href="">
+                 <img src="Images\carnitas_logo_transparent.png" width="50" height="56" alt="Carnitas logo">
+             </a>
+             <nav class="desktop_nav">
+                 <div class="sidebar close">
+                     <img src="Images/x.svg" alt="">
+                 </div>
+                 <ul>
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="menu.html#menu_banner">Menu</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+                     <li><a href="contact.html#faq">FAQ</a></li>
+                 </ul>
+                 <a href="menu.html" class="btn_outline"> ORDER NOW </a>
+             </nav>
+             <div class="sidebar open">
+                 <img src="Images/menu.svg" alt="">
+             </div>
+        </div>
+     </header>
 
      <!-- Scroll to top button -->
 
@@ -264,37 +270,39 @@
             <p>If you want more of a specific dish, here is individual pricing for each item:</p>
          </div>
          <div class="sides_cards">
-            <div class="s_card">
-                <div id="card_img">
-                    <img src="Images/cazo_dark.jpg" alt="">
-                </div>
-                <div id="card_bottom">
-                    <div id="s_and_price">
-                        <h4>Gorditas </h4>
-                        <hr>
-                        <h4><span>5.0$</span></h4>
+            <div class="sides_container">
+                <div class="s_card item1">
+                    <div id="card_img">
+                        <!-- <img src="Images/cazo_dark.jpg" alt=""> -->
                     </div>
-                    <p>Masa stuffed with leftover Carnitas   </p>
+                    <div class="card_bottom">
+                        <div id="s_and_price">
+                            <h4>Gorditas </h4>
+                            <hr>
+                            <h4><span>5.0$</span></h4>
+                        </div>
+                        <p>Masa stuffed with leftover Carnitas   </p>
+                    </div>
+                </div>
+                <div class="s_card item2">
+                    <div id="card_img">
+                        <!-- <img src="Images/dorados.jpg" alt=""> -->
+                    </div>
+                    <div class="card_bottom">
+                        <div id="s_and_price">
+                            <h4>Gorditas </h4>
+                            <hr>
+                            <h4><span>5.0$</span></h4>
+                        </div>
+                        <p>Masa stuffed with leftover Carnitas   </p>
+                    </div>
                 </div>
             </div>
-            <div class="s_card">
+            <div class="s_card item3">
                 <div id="card_img">
-                    <img src="Images/dorados.jpg" alt="">
+                    <!-- <img src="Images/torta.jpg" alt=""> -->
                 </div>
-                <div id="card_bottom">
-                    <div id="s_and_price">
-                        <h4>Gorditas </h4>
-                        <hr>
-                        <h4><span>5.0$</span></h4>
-                    </div>
-                    <p>Masa stuffed with leftover Carnitas   </p>
-                </div>
-            </div>
-            <div class="s_card">
-                <div id="card_img">
-                    <img src="Images/torta.jpg" alt="">
-                </div>
-                <div id="card_bottom">
+                <div class="card_bottom">
                     <div id="s_and_price">
                         <h4>Gorditas </h4>
                         <hr>
