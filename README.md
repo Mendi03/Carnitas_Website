@@ -4,7 +4,7 @@ My family runs a small business that consists of offering food for events, it ca
 
 ## Website Preview
 
-[Carnitas Jose Alfredo](https://github.com/user-attachments/assets/1cd1da98-f3cc-4780-a3d0-f67073b3dbcd)
+https://github.com/user-attachments/assets/bb181d1b-58cc-4d76-92ec-4a64b245672b
 
 ### Other Information
 
