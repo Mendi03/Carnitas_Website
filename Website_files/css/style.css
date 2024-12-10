@@ -191,6 +191,7 @@ header div{
 header .sidebar{
     display: none;
     width: fit-content;
+    cursor: pointer;
 }
 header .sidebar img{
     width: 28px;
